@@ -21,8 +21,46 @@ body {
 .username {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     color: #333;
+}
+
+.cta-button {
+    background-color: transparent;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    border: 1.5px solid #333;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.cta-button:hover {
+    color: #fff;
+}
+
+.cta-button:hover::before {
+    transform: translateX(0);
 }
 
 .chat-container {
@@ -108,10 +146,32 @@ body {
     }
 }
 
+.links-label-container {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.links-label {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.down-arrow {
+    width: 20px;
+    height: 20px;
+    fill: #333;
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 10px; /* Reduced from 25px to account for new label */
 }
 
 .icon-button {
